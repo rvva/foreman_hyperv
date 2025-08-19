@@ -4,7 +4,7 @@ module ForemanHyperv
 
     initializer 'foreman_hyperv.register_plugin', :before => :finisher_hook do
       Foreman::Plugin.register :foreman_hyperv do
-        requires_foreman '>= 1.14'
+        requires_foreman '>= 1.14', '< 4'
         compute_resource ForemanHyperv::Hyperv
       end
     end
